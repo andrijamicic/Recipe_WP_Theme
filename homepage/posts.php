@@ -7,7 +7,8 @@ $recipe_query = new WP_Query(
 	'nopaging'=> false,
 //	'posts_per_page'=>3, 
 	'order'=>'DESC',
-	'orderby'=>'ID')); 
+	'orderby'=>'ID',
+        'paged' => $paged)); 
 ?>
 <?php function get_excerpt($contents){
 $excerpt = $contents;
