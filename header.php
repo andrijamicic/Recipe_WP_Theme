@@ -22,7 +22,7 @@
  //'after'    => '<span class="child-arrow"></span>', 
  ) ); ?>
 <?php if (true) : global $woocommerce; ?>
-<?php $class = ( $woocommerce->cart->get_cart_contents_count() > 0) ? "cart-icon" : "cart-icon empty-cart"; ?>
+<?php $class = ( is_object( $woocommerce->cart ) ? $woocommerce->cart->get_cart_contents_count() : '0' > 0) ? "cart-icon" : "cart-icon empty-cart"; ?>
 	<div class="<?php echo $class; ?>">
 		<span class="check-cart"></span>
 		<div class="cart-wrap">
